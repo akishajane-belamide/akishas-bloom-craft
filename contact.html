@@ -41,13 +41,73 @@
       line-height: 1.5;
     }
     section {
-        margin-bottom: 30px;
-        margin-bottom: 30px;
-        background-color: #FFF0F5;
-        padding: 20px;
-        border-left: 5px solid #bb437e;
-        border-radius: 6px;
+      margin-bottom: 30px;
+      margin-bottom: 30px;
+      background-color: #FFF0F5;
+      padding: 20px;
+      border-left: 5px solid #bb437e;
+      border-radius: 6px;
     }
+    fieldset{
+      border:2px solid #b64382;
+      border-radius:15px;
+      padding:20px;
+      background:#f3d7e6;
+      }
+
+    legend{
+      color:#b64382;
+      font-size:28px;
+      font-weight:bold;
+      padding:0 10px;
+    }
+
+    label{
+      display:block;
+      margin-top:15px;
+      margin-bottom:5px;
+      font-size:22px;
+      font-weight:bold;
+    }
+
+    input, select, textarea{
+      width:100%;
+      padding:12px;
+      border:2px solid #d8a8c2;
+      border-radius:10px;
+      font-size:18px;
+      box-sizing:border-box;
+    }
+
+    textarea{
+      resize:vertical;
+    }
+
+    button{
+      background:#b64382;
+      color:white;
+      border:none;
+      padding:15px 25px;
+      border-radius:10px;
+      font-size:20px;
+      margin-top:20px;
+    }
+
+                                                                
+    button:hover{
+      background:#9d356f;
+    }
+
+    footer {
+        margin-top: 40px;
+        padding: 15px;
+        font-size: 14px;
+        color: balck;
+        background-color: #d8a8c2;
+        text-align: center;
+        }
+
+                                                                    
 
 </style>
 </head>
@@ -65,6 +125,38 @@
       <p>Email: akishabelamide@gmail.com</p>
       <p>Phone: 09941701870</p>
     </section>
+
+    <form>
+
+      <fieldset>
+        <legend>Your Details</legend>
+
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="subject">Subject</label><br>
+        <select id="subject" name="subject">
+        <option value="product-question">Product Question</option>
+        <option value="order-status">Order Status</option>
+        <option value="custom-order">Custom Order Request</option>
+        <option value="wholesale-enquiry">Wholesale Enquiry</option>
+        <option value="other">Other</option>
+        </select><br><br>
+
+        <label for="message">Message</label><br>
+        <textarea id="message" name="message" rows="6" cols="40" required></textarea><br><br>
+
+        <button type="submit">Send Message</button>
+      </fieldset>
+
+    </form>
+  
+    <footer>
+     <p>BloomCraft Akisha Belamide &middot; 2026</p>
+      </footer>
 
 </body>
 </html>
