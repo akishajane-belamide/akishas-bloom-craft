@@ -101,6 +101,68 @@ footer{
     background:#ff8fb1;
     color:white;
 }
+
+form{
+    max-width:600px;
+    margin:auto;
+}
+
+fieldset{
+    background:#f3d7e6;
+    border:2px solid #b64382;
+    border-radius:15px;
+    padding:20px;
+    margin-bottom:20px;
+}
+
+legend{
+    color:#b64382;
+    font-size:24px;
+    font-weight:bold;
+    padding:0 10px;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:5px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+input[type="number"],
+input[type="email"],
+textarea,
+select{
+    width:100%;
+    padding:12px;
+    border:2px solid #d8a8c2;
+    border-radius:10px;
+    font-size:16px;
+    box-sizing:border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"]{
+    margin-right:8px;
+}
+
+button{
+    width:100%;
+    background:#b64382;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:15px;
+}
+
+button:hover{
+    background:#9d356f;
+}
 </style>
 </head>
 <body>
@@ -157,6 +219,57 @@ footer{
         </table>
     </div>
 </div>
+
+<form>
+
+    <fieldset>
+        <legend>Order Details</legend>
+         
+        <label for="product">Product to Order</label>
+        <select id="product" name="product" required>
+            <option value="">-- Select a Bouquet --</option>
+            <option value="Regular-Bouquet">Regular Bouquet with 5 Tulips</option>
+            <option value="Premium-Bouquet">Premium Bouquet with 8 Tulips</option>
+            <option value="Deluxe-Bouquet">Deluxe Bouquet with 12 Tulips</option>
+        </select>
+
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="20" required>
+
+        <fieldset>
+            <legend>Delivery Method</legend>
+
+            <input type="radio" id="pickup" name="delivery" value="pickup">
+            <label for="pickup">Store Pickup</label><br>
+
+            <input type="radio" id="standard" name="delivery" value="standard">
+            <label for="standard">Standard Delivery</label><br>
+
+            <input type="radio" id="express" name="delivery" value="express">
+            <label for="express">Express Delivery</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Optional Extras</legend>
+
+            <input type="checkbox" id="giftwrap" name="extras" value="gift-wrap">
+            <label for="giftwrap">Gift Wrapping</label><br>
+
+            <input type="checkbox" id="card" name="extras" value="greeting-card">
+            <label for="card">Greeting Card</label><br>
+
+            <input type="checkbox" id="premium" name="extras" value="premium-packaging">
+            <label for="premium">Premium Packaging</label>
+        </fieldset>
+
+        <label for="email">Contact Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <button type="submit">Place Order</button>
+
+    </fieldset>
+
+</form>
 
 <footer>
     © 2026 Akisha's BloomCraft | Handmade Flowers That Last Forever
