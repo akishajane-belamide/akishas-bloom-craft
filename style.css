@@ -1,0 +1,108 @@
+/* ==========================================
+   1. VARIABLES
+   ========================================== */
+:root {
+  --brand-color: #BA68C8;       /* Primary brand color */
+  --dark-ink: #222222;          /* Dark ink text color */
+  --muted-grey: #555555;        /* Muted text/border grey */
+  --light-bg: #F3E5F5;          /* Light background color */
+  --white: #ffffff;             /* Card background white */
+}
+
+/* ==========================================
+   2. BASE STYLES
+   ========================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--light-bg);
+  color: var(--dark-ink);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+/* ==========================================
+   3. LAYOUT REGIONS
+   ========================================== */
+header {
+  background-color: var(--brand-color);
+  color: var(--white);
+  padding: 20px 0;
+}
+
+nav {
+  padding: 10px 0;
+  margin-right: 0;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  padding: 20px;
+  color: var(--muted-grey);
+}
+
+/* ==========================================
+   4. STYLE THE NAV
+   ========================================== */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  color: var(--dark-ink);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--brand-color);
+}
+
+/* ==========================================
+   5. COMPONENTS (Product Cards)
+   ========================================== */
+.description {
+  padding: 20px;
+  font-size: 18px;
+  color: var(--muted-grey);
+}
+
+article {
+  background-color: var(--white);
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  background-color: var(--brand-color);
+  color: var(--white);
+  margin: 0;
+
