@@ -42,6 +42,7 @@ img {
   align-items: center;
   background-color: var(--brand-color);
   color: var(--white);
+  padding: 35px;
 }
 .site-header nav ul {
   display: flex;
