@@ -36,10 +36,17 @@ img {
 /* ==========================================
    3. LAYOUT REGIONS
    ========================================== */
-header {
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: var(--brand-color);
   color: var(--white);
-  padding: 20px 0;
+  padding: 20px;
+}
+.site-header nav ul {
+  display: flex;
+  gap: 20px;
 }
 
 nav {
@@ -66,10 +73,6 @@ nav ul {
   display: flex;
   justify-content: center;
   gap: 20px;
-}
-
-nav li {
-  display: inline-block;
 }
 
 nav a {
