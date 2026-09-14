@@ -42,7 +42,6 @@ img {
   align-items: center;
   background-color: var(--brand-color);
   color: var(--white);
-  padding: 20px;
 }
 .site-header nav ul {
   display: flex;
@@ -56,6 +55,13 @@ nav {
 
 main {
   padding: 20px;
+}
+
+.description {
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+  color: var(--muted-grey);
 }
 
 footer {
