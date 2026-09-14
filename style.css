@@ -95,12 +95,18 @@ nav a:hover {
 /* ==========================================
    5. COMPONENTS (Product Cards)
    ========================================== */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+   }
+
 .product-card {
+  flex: 1 1 240px;
   background-color: var(--white);
   border-radius: 12px;
-  padding: 20px; /* At least 16px */
-  border-left: 6px solid var(--brand-color); /* Coloured left border using variable */
-  margin-bottom: 25px; /* Margin-bottom so cards don't touch */
+  padding: 20px;
+  border-left: 6px solid var(--brand-color);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   text-align: left;
 }
