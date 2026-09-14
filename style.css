@@ -42,7 +42,7 @@ img {
   align-items: center;
   background-color: var(--brand-color);
   color: var(--white);
-  padding: 30px;
+  padding: 20px;
 }
 .site-header nav ul {
   display: flex;
