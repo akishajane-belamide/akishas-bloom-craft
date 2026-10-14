@@ -46,7 +46,7 @@ img {
   gap: 16px;
 }
 
-header, .site-header {
+header {
   grid-area: masthead;
    }
 
