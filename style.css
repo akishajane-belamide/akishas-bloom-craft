@@ -36,6 +36,20 @@ img {
 /* ==========================================
    3. LAYOUT REGIONS
    ========================================== */
+.page {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-areas:
+    "masthead masthead"
+    "side     main"
+    "foot     foot";
+  gap: 16px;
+}
+
+header, .site-header {
+  grid-area: masthead;
+   }
+
 .site-header {
   display: flex;
   justify-content: space-between;
@@ -49,13 +63,17 @@ img {
   gap: 20px;
 }
 
-nav {
-  padding: 10px 0;
-  margin-right: 0;
+aside {
+    grid-area: side;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid var(--muted-grey);
 }
 
 main {
   padding: 20px;
+  grid-area: main;
 }
 
 .description {
@@ -68,6 +86,7 @@ main {
 footer {
   padding: 20px;
   color: var(--muted-grey);
+  grid-area: foot;
 }
 
 /* ==========================================
