@@ -157,3 +157,74 @@ nav a:hover {
     margin-top: 0;
     margin-bottom: 10px;
 }
+
+/* ==========================================
+   CONTACT FORM
+   ========================================== */
+
+fieldset {
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid var(--brand-color);
+  background-color: var(--white);
+  margin-bottom: 20px;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0 10px;
+  color: var(--brand-color);
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--dark-ink);
+  text-align: left;
+}
+
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid var(--muted-grey);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background-color: var(--brand-color);
+  color: var(--white);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  opacity: 0.9;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: 3px solid var(--brand-color);
+  outline-offset: 2px;
+     }
