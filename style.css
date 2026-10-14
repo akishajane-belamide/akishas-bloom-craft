@@ -2,11 +2,11 @@
    1. VARIABLES
    ========================================== */
 :root {
-    --brand-color: #BA68C8;
-    --dark-ink: #222222;
-    --muted-grey: #555555;
-    --light-bg: #F3E5F5;
-    --white: #ffffff;
+    --brand-color: #BA68C8; /* Primary brand color */
+    --dark-ink: #222222;    /* Dark ink text color */
+    --muted-grey: #555555;  /* Muted text/border grey */
+    --light-bg: #F3E5F5;    /* Light background color */
+    --white: #ffffff;       /* Card background white */
 }
 
 /* ==========================================
@@ -33,22 +33,23 @@ img {
 }
 
 /* ==========================================
-   3. LAYOUT REGIONS (GRID SETUP)
+   3. LAYOUT REGIONS (MOBILE-FIRST GRID)
    ========================================== */
 .page {
     display: grid;
-    grid-template-columns: 220px 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
-        "masthead masthead"
-        "side     main"
-        "foot     foot";
+        "masthead"
+        "main"
+        "side"
+        "foot";
     gap: 16px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 16px;
 }
 
-header { 
+header, .site-header { 
     grid-area: masthead; 
 }
 
@@ -75,6 +76,15 @@ footer {
     color: var(--muted-grey);
 }
 
+@media (min-width: 700px) {
+    .page {
+        grid-template-columns: 220px 1fr;
+        grid-template-areas:
+            "masthead masthead"
+            "side     main"
+            "foot     foot";
+    }
+}
 .site-header {
     display: flex;
     justify-content: space-between;
@@ -123,7 +133,7 @@ nav a:hover {
 }
 
 /* ==========================================
-   5. COMPONENTS 
+   5. COMPONENTS
    ========================================== */
 .product-grid {
     display: flex;
@@ -146,4 +156,4 @@ nav a:hover {
     color: var(--dark-ink);
     margin-top: 0;
     margin-bottom: 10px;
-   }
+}
