@@ -2,212 +2,148 @@
    1. VARIABLES
    ========================================== */
 :root {
-  --brand-color: #BA68C8;       /* Primary brand color */
-  --dark-ink: #222222;          /* Dark ink text color */
-  --muted-grey: #555555;        /* Muted text/border grey */
-  --light-bg: #F3E5F5;          /* Light background color */
-  --white: #ffffff;             /* Card background white */
+    --brand-color: #BA68C8;
+    --dark-ink: #222222;
+    --muted-grey: #555555;
+    --light-bg: #F3E5F5;
+    --white: #ffffff;
 }
 
 /* ==========================================
    2. BASE STYLES
    ========================================== */
 *, *::before, *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: var(--light-bg);
-  color: var(--dark-ink);
-  margin: 0;
-  padding: 0;
-  text-align: center;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--light-bg);
+    color: var(--dark-ink);
+    margin: 0;
+    padding: 0;
 }
 
 img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
-  margin-top: 15px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-top: 15px;
 }
 
 /* ==========================================
-   3. LAYOUT REGIONS
+   3. LAYOUT REGIONS (GRID SETUP)
    ========================================== */
 .page {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  grid-template-areas:
-    "masthead masthead"
-    "side     main"
-    "foot     foot";
-  gap: 16px;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-areas:
+        "masthead masthead"
+        "side     main"
+        "foot     foot";
+    gap: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
 }
 
-header {
-  grid-area: masthead;
-   }
-
-.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--brand-color);
-  color: var(--white);
-  padding: 20px;
-}
-.site-header nav ul {
-  display: flex;
-  gap: 20px;
+header { 
+    grid-area: masthead; 
 }
 
-aside {
-    grid-area: side;
+aside { 
+    grid-area: side; 
     background-color: var(--white);
     padding: 20px;
-    border-radius: 8px;
-    border: 2px solid var(--muted-grey);
+    border-radius: 10px;
 }
 
-main {
-  padding: 20px;
-  grid-area: main;
+main { 
+    grid-area: main; 
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 10px;
+}
+
+footer { 
+    grid-area: foot; 
+    padding: 20px;
+    text-align: center;
+    background-color: var(--white);
+    border-radius: 10px;
+    color: var(--muted-grey);
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--brand-color);
+    color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.site-header nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .description {
-  max-width: 600px;
-  margin: 20px auto;
-  text-align: center;
-  color: var(--muted-grey);
-}
-
-footer {
-  padding: 20px;
-  color: var(--muted-grey);
-  grid-area: foot;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+    color: var(--muted-grey);
 }
 
 /* ==========================================
    4. STYLE THE NAV
    ========================================== */
 nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav a {
-  color: var(--dark-ink);
-  text-decoration: none;
-  font-weight: bold;
+    color: var(--dark-ink);
+    text-decoration: none;
+    font-weight: bold;
 }
 
 nav a:hover {
-  color: var(--brand-color);
+    color: var(--brand-color);
 }
 
 /* ==========================================
-   5. COMPONENTS (Product Cards)
+   5. COMPONENTS 
    ========================================== */
 .product-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-   }
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
 
 .product-card {
-  flex: 1 1 240px;
-  background-color: var(--white);
-  border-radius: 12px;
-  padding: 20px;
-  border-left: 6px solid var(--brand-color);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  text-align: left;
+    flex: 1 1 240px;
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 20px;
+    border-left: 6px solid var(--brand-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: left;
 }
 
 .product-title {
-  font-size: 1.4rem;
-  color: var(--dark-ink); /* Good contrast against white background */
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-/* ==========================================
-   CONTACT FORM
-   ========================================== */
-
-/* Fieldset and Legend */
-fieldset {
-  padding: 20px;
-  border-radius: 10px;
-  border: 2px solid var(--brand-color);
-  background-color: var(--white);
-  margin-bottom: 20px;
-}
-
-legend {
-  font-weight: bold;
-  font-size: 1.2rem;
-  padding: 0 10px;
-  color: var(--brand-color);
-}
-
-/* Form Labels */
-label {
-  display: block;
-  margin-top: 15px;
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: var(--dark-ink);
-  text-align: left;
-}
-
-/* Inputs, Select, and Textarea */
-input[type="text"],
-input[type="email"],
-select,
-textarea {
-  width: 100%;
-  padding: 12px;
-  border: 2px solid var(--muted-grey);
-  border-radius: 8px;
-  font-size: 1rem;
-  font-family: inherit;
-  box-sizing: border-box;
-}
-
-textarea {
-  resize: vertical;
-}
-
-/* Submit Button */
-button[type="submit"] {
-  background-color: var(--brand-color);
-  color: var(--white);
-  border: none;
-  padding: 12px 25px;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 15px;
-  width: 100%;
-}
-
-button[type="submit"]:hover {
-  opacity: 0.9;
-}
-
-/* Visible Focus State */
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-  outline: 3px solid var(--brand-color);
-  outline-offset: 2px;
-}
+    font-size: 1.4rem;
+    color: var(--dark-ink);
+    margin-top: 0;
+    margin-bottom: 10px;
+   }
