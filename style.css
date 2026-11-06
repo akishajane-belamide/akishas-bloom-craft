@@ -27,7 +27,7 @@ body {
 
 img {
     width: 100%;
-    max-width: 400px;
+    max-width: 100%;
     border-radius: 10px;
     margin-top: 15px;
 }
@@ -44,9 +44,6 @@ img {
         "side"
         "foot";
     gap: 16px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 16px;
 }
 
 header, .site-header { 
@@ -83,6 +80,8 @@ footer {
             "masthead masthead"
             "side     main"
             "foot     foot";
+       max-width: 1200px;
+       margin: 0 auto;
     }
 }
 .site-header {
