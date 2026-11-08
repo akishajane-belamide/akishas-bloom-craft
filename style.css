@@ -1,82 +1,58 @@
-/* ==========================================
-   1. VARIABLES
-   ========================================== */
+
+   /* VARIABLES */
 :root {
-    --brand-color: #BA68C8; /* Primary brand color */
-    --dark-ink: #222222;    /* Dark ink text color */
-    --muted-grey: #555555;  /* Muted text/border grey */
-    --light-bg: #F3E5F5;    /* Light background color */
-    --white: #ffffff;       /* Card background white */
+    --brand-color: #BA68C8;
+    --dark-ink: #222222;
+    --muted-grey: #555555;
+    --light-bg: #F3E5F5;
+    --white: #ffffff;
 }
 
 /* ==========================================
-   2. BASE STYLES
-   ========================================== */
+   BASE STYLES
+      ========================================== */
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: var(--light-bg);
-  color: var(--dark-ink);
-  overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--light-bg);
+    color: var(--dark-ink);
 }
 
 img {
     width: 100%;
-    max-width: 100%;
+    height: auto;
     border-radius: 10px;
     margin-top: 15px;
 }
 
 /* ==========================================
-   3. LAYOUT REGIONS (MOBILE-FIRST GRID)
+    LAYOUT 
    ========================================== */
 .page {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "masthead"
-    "main"
-    "side"
-    "foot";
-  gap: 16px;
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "masthead"
+        "main"
+        "side"
+        "foot";
+    gap: 16px;
+    padding: 16px;
+    width: 100%;
 }
 
-header, .site-header { 
-    grid-area: masthead; 
-}
+header, .site-header { grid-area: masthead; }
+main                { grid-area: main; background-color: var(--white); padding: 20px; border-radius: 10px; }
+aside               { grid-area: side; background-color: var(--white); padding: 20px; border-radius: 10px; }
+footer              { grid-area: foot; background-color: var(--white); padding: 20px; text-align: center; border-radius: 10px; }
 
-aside { 
-    grid-area: side; 
-    background-color: var(--white);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-main { 
-    grid-area: main; 
-    padding: 20px;
-    background-color: var(--white);
-    border-radius: 10px;
-}
-
-footer { 
-    grid-area: foot; 
-    padding: 20px;
-    text-align: center;
-    background-color: var(--white);
-    border-radius: 10px;
-    color: var(--muted-grey);
-}
 
 @media (min-width: 700px) {
     .page {
@@ -85,11 +61,14 @@ footer {
             "masthead masthead"
             "side     main"
             "foot     foot";
-       max-width: 1200px;
-       margin: 0 auto;
-       padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
     }
-}
+
+/* ==========================================
+   STYLE THE NAV
+      ========================================== */
+
 .site-header {
     display: flex;
     justify-content: space-between;
@@ -98,71 +77,48 @@ footer {
     color: var(--white);
     padding: 20px;
     border-radius: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .site-header nav ul {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.description {
-    max-width: 100px;
-    margin: 20px auto;
-    text-align: center;
-    color: var(--muted-grey);
-}
-
-/* ==========================================
-   4. STYLE THE NAV
-   ========================================== */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-nav a {
-    color: var(--dark-ink);
+.site-header nav a {
+    color: var(--white);
     text-decoration: none;
     font-weight: bold;
 }
 
-nav a:hover {
-    color: var(--brand-color);
+.description {
+    text-align: center;
+    color: var(--muted-grey);
+    margin-bottom: 20px;
 }
 
 /* ==========================================
-   5. COMPONENTS
-   ========================================== */
+    COMPONENTS
+      ========================================== */
+
 .product-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 20px;
 }
 
 .product-card {
-    flex: 1 1 100px;
+    flex: 1 1 250px;
     background-color: var(--white);
-    border-radius: 12px;
-    padding: 20px;
-    border-left: 6px solid var(--brand-color);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    text-align: left;
+    border-radius: 10px;
+    padding: 15px;
+    border-left: 5px solid var(--brand-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-.product-title {
-    font-size: 1.4rem;
-    color: var(--dark-ink);
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
 /* ==========================================
    CONTACT FORM
    ========================================== */
@@ -232,4 +188,5 @@ textarea:focus,
 button:focus {
   outline: 3px solid var(--brand-color);
   outline-offset: 2px;
-     }
+}
+}
