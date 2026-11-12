@@ -15,7 +15,7 @@ if (titleElement) {
 // 4. Writes a dynamic copyright line into footer
 const footerElement = document.getElementById("dynamic-footer");
 if (footerElement) {
-    footerElement.textContent = `© ${currentYear} ${guideName} by Akisha Belamide`;
+    footerElement.textContent = `© ${currentYear} ${shopName} by Akisha Belamide`;
     }
 
 // 5. Logs at least three labelled values to the console using console.log()
